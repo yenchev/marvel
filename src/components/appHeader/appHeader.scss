@@ -1,0 +1,42 @@
+.app__header {
+  background-color: rgba(43, 1, 255, 0.382);
+  outline: 1px solid rgba(51, 0, 255, 0.721);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #b3b0b0;
+  padding: 0 10px;
+
+  .app__title {
+    display: inline-block;
+    text-align: left;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 33px;
+
+    span {
+      color: #d00000;
+    }
+  }
+
+  .app__menu {
+    display: inline-block;
+
+    ul {
+      display: flex;
+      text-align: right;
+      flex-direction: row;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 28px;
+    }
+    a {
+      transition: color 0.5s ease-in-out;
+      color: inherit;
+    }
+    a.active {
+      color: #d00000;
+    }
+  }
+}

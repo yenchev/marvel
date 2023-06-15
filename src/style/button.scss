@@ -1,0 +1,47 @@
+.button {
+  position: relative;
+  width: 101px;
+  height: 38px;
+  text-align: center;
+  font-weight: 800;
+  font-size: 16px;
+  display: inline-block;
+  background-color: #ff00004f;
+  color: #bbbbbb;
+  border: none;
+  border-radius: 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  &:hover {
+    transition: 0.5s ease;
+    transform: scale(1.2);
+    box-shadow: 0 0 10px rgb(134, 124, 252);
+  }
+  &:active {
+    transition: 0.8s ease;
+    background-color: #0026ff;
+    color: #ffffff;
+    box-shadow: 0 0 10px 5px rgb(45, 80, 255);
+    transform: scale(1.1);
+  }
+}
+.load__button {
+  font-size: 21px;
+  width: 200px;
+  box-shadow: 0 0 30px rgb(0, 0, 0);
+  &:active {
+    transition: none;
+  }
+  &:hover {
+    outline: 1px solid rgba(51, 0, 255, 0.721);
+  }
+}
+
+.find__char__button {
+  font-size: 18px;
+  margin-top: 30px;
+  height: 40px;
+  box-shadow: 0 0 15px rgb(134, 124, 252);
+}
