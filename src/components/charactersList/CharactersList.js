@@ -14,13 +14,15 @@ const CharactersList = () => {
           <Character />
           <Character />
           <Character />
-          <button className="button load__button">Load More </button>
         </div>
         <div className="row">
           <Character />
           <Character />
           <Character />
         </div>
+      </div>
+      <div className="button__wrapper">
+        <button className="button load__button">Load More </button>
       </div>
     </div>
   );

@@ -1,7 +1,8 @@
 .app__header {
   background-color: rgba(43, 1, 255, 0.382);
   outline: 1px solid rgba(51, 0, 255, 0.721);
-  border-radius: 10px;
+  box-shadow: 0 0 30px rgb(101, 30, 255);
+  border-radius: 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;

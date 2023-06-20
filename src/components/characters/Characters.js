@@ -1,4 +1,5 @@
 import "./characters.scss";
+import CharacterSkeleton from "../characterSkeleton/CharacterSkeleton";
 
 import CharacterInfo from "../characterInfo/CharacterInfo";
 import CharactersList from "../charactersList/CharactersList";
@@ -11,7 +12,8 @@ const Characters = () => {
         <CharactersList />
       </div>
       <div className="character__info">
-        <CharacterInfo />
+        {/* <CharacterInfo /> */}
+        <CharacterSkeleton />
         <FindCharacter />
       </div>
     </div>

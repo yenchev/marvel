@@ -1,3 +1,14 @@
+@keyframes glow-animation {
+  0% {
+    box-shadow: 0 0 150px 30px rgba(255, 30, 195, 0.454);
+  }
+  50% {
+    box-shadow: 0 0 190px 50px rgba(51, 0, 255, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 150px 30px rgba(255, 30, 195, 0.454);
+  }
+}
 .comics__banner {
   background-color: rgb(95, 5, 76);
   display: flex;
@@ -6,7 +17,7 @@
   width: 1100px;
   margin-top: 50px;
   padding: 0 20px;
-  box-shadow: 0 0 30px rgb(0, 0, 0);
+  animation: glow-animation 6s infinite;
   .banner__tittle {
     font-weight: 700;
     font-size: 26px;

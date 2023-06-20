@@ -1,0 +1,15 @@
+.skeleton {
+  margin-top: 19px;
+  max-width: 425px;
+  height: auto;
+  background-color: rgba(47, 2, 52, 0.514);
+  border-radius: 5px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.563);
+  .skeleton__header {
+    padding-top: 20px;
+    padding-left: 20px;
+    font-weight: 700;
+    font-size: 20px;
+    color: #ff4aed;
+  }
+}

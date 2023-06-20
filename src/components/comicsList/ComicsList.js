@@ -1,51 +1,29 @@
 import "./comicsList.scss";
-import charImg from "../../img/character.jpg";
+
+import Comics from "../comics/Comics";
 
 const ComicsList = () => {
   return (
     <div>
       <div className="comics__list">
         <div className="row">
-          <div className="character">
-            <img src={charImg} alt="Character" className="character__image" />
-            <div className="character__name">THOR</div>
-          </div>
-          <div className="character">
-            <img src={charImg} alt="Character" className="character__image" />
-            <div className="character__name">THOR</div>
-          </div>
+          <Comics />
+          <Comics />
         </div>
         <div className="row">
-          <div className="character">
-            <img src={charImg} alt="Character" className="character__image" />
-            <div className="character__name">THOR</div>
-          </div>
-          <div className="character">
-            <img src={charImg} alt="Character" className="character__image" />
-            <div className="character__name">THOR</div>
-          </div>
+          <Comics />
+          <Comics />
         </div>
         <div className="row">
-          <div className="character">
-            <img src={charImg} alt="Character" className="character__image" />
-            <div className="character__name">THOR</div>
-          </div>
-          <div className="character">
-            <img src={charImg} alt="Character" className="character__image" />
-            <div className="character__name">THOR</div>
-          </div>
+          <Comics />
+          <Comics />
         </div>
         <div className="row">
-          <div className="character">
-            <img src={charImg} alt="Character" className="character__image" />
-            <div className="character__name">THOR</div>
-          </div>
-          <div className="character">
-            <img src={charImg} alt="Character" className="character__image" />
-            <div className="character__name">THOR</div>
-          </div>
+          <Comics />
+          <Comics />
         </div>
-
+      </div>
+      <div className="button__wrapper">
         <button className="button load__button">Load More </button>
       </div>
     </div>

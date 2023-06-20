@@ -1,5 +1,4 @@
 import "./randomCharacter.scss";
-
 import charImg from "../../img/character.jpg";
 import decoration from "../../img/Decoration.png";
 
@@ -11,7 +10,7 @@ const RandomCharacter = () => {
           <img src={charImg} alt="Character" className="character-image" />
         </div>
         <div className="character-info">
-          <h2 className="character-name">Thor</h2>
+          <h2 className="character-name">thor</h2>
           <p className="character-description">As the Norse God of thunder and lightning, Thor wields one of the greatest weapons ever made, the enchanted hammer Mjolnir. While others have described Thor as an over-muscled, oafish imbecile, he's quite smart and compassionate...</p>
           <div className="buttons">
             <button className="button home-button">HOMEPAGE</button>

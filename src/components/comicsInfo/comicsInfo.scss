@@ -1,0 +1,58 @@
+.comics__info__page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+  .comics__info {
+    background-color: rgba(0, 0, 0, 0.21);
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.525);
+    padding: 40px;
+    display: flex;
+    align-items: flex-start;
+    margin-top: 90px;
+    max-width: 1100px;
+  }
+
+  .comics__img {
+    width: 250px;
+    height: 350px;
+    margin-right: 50px;
+  }
+
+  .comics__text {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+
+    .comics__name {
+      font-size: 26px;
+      line-height: 20px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+
+    .comics__description {
+      margin-right: 0px;
+      padding-top: 10px;
+      font-weight: 400;
+      font-size: 20px;
+    }
+    .comics__pages__num {
+      margin-top: 20px;
+      font-weight: 400;
+      font-size: 18px;
+    }
+    .comics__lang {
+      margin-top: 20px;
+      font-weight: 400;
+      font-size: 18px;
+    }
+    .comics__price {
+      margin-top: 20px;
+      font-weight: 700;
+      font-size: 24px;
+      color: #9f0013;
+    }
+  }
+}
