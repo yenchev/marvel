@@ -38,14 +38,14 @@ const App = () => {
   }, []);
 
   return (
-    <Router>
+    <Router basename="/marvel">
       <header>
         <AppHeader />
       </header>
       <main>
         <Routes>
-          <Route path="marvel/" element={<MainPage characters={characters} />} />
-          <Route path="marvel/comocs" element={<ComicsPage comics={comics} />} />
+          <Route exact path="/marvel" element={<MainPage characters={characters} />} />
+          <Route path="/comics" element={<ComicsPage comics={comics} />} />
         </Routes>
       </main>
     </Router>
