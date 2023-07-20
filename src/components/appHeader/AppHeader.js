@@ -12,7 +12,7 @@ const AppHeader = () => {
   return (
     <header className="app__header">
       <h1 className="app__title">
-        <Link to="/" onClick={() => setActiveTab("")}>
+        <Link to="/marvel" onClick={() => setActiveTab("")}>
           <span>Marvel</span> information portal
         </Link>
       </h1>
