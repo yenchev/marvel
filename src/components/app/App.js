@@ -38,7 +38,7 @@ const App = () => {
   }, []);
 
   return (
-    <Router basename="/">
+    <Router basename="/marvel">
       <header>
         <AppHeader />
       </header>
