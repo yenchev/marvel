@@ -19,7 +19,7 @@ const AppHeader = () => {
       <nav className="app__menu">
         <ul>
           <li>
-            <NavLink to="/" end className="nav-link" activeClassName={activeTab === "Characters" ? "active" : ""} onClick={() => handleNavLinkClick("Characters")}>
+            <NavLink to="/marvel" end className="nav-link" activeClassName={activeTab === "Characters" ? "active" : ""} onClick={() => handleNavLinkClick("Characters")}>
               Characters
             </NavLink>
           </li>

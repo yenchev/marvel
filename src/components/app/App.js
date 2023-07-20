@@ -45,7 +45,7 @@ const App = () => {
       <main>
         <Routes>
           <Route exact path="/marvel" element={<MainPage characters={characters} />} />
-          <Route exact path="/comocs" element={<ComicsPage comics={comics} />} />
+          <Route exact path="/comics" element={<ComicsPage comics={comics} />} />
         </Routes>
       </main>
     </Router>

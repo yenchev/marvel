@@ -1,6 +1,6 @@
 {
-  "homepage": "https://yenchev.github.io/marvel",
-  "name": "marvell",
+  "name": "marvel",
+  "homepage": "https://yenchev.github.io/marvel/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
