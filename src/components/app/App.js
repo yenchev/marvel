@@ -44,8 +44,8 @@ const App = () => {
       </header>
       <main>
         <Routes>
-          <Route path="https://yenchev.github.io/marvel/" element={<MainPage characters={characters} />} />
-          <Route path="https://yenchev.github.io/marvel/comics" element={<ComicsPage comics={comics} />} />
+          <Route path="marvel/" element={<MainPage characters={characters} />} />
+          <Route path="marvel/comics" element={<ComicsPage comics={comics} />} />
         </Routes>
       </main>
     </Router>
