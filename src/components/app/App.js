@@ -44,8 +44,8 @@ const App = () => {
       </header>
       <main>
         <Routes>
-          <Route exact path="/marvel/" element={<MainPage characters={characters} />} />
-          <Route path="/marvel/comocs" element={<ComicsPage comics={comics} />} />
+          <Route basename="/marvel/" element={<MainPage characters={characters} />} />
+          <Route basename="/marvel/comocs" element={<ComicsPage comics={comics} />} />
         </Routes>
       </main>
     </Router>
