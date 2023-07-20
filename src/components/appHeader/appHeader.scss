@@ -1,13 +1,12 @@
 .app__header {
-  background-color: rgba(43, 1, 255, 0.382);
+  background-color: rgba(24, 0, 144, 0.232);
   outline: 1px solid rgba(51, 0, 255, 0.721);
-  box-shadow: 0 0 30px rgb(101, 30, 255);
   border-radius: 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  color: #b3b0b0;
-  padding: 0 10px;
+  color: #888686;
+  padding: 4px 20px;
 
   .app__title {
     display: inline-block;

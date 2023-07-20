@@ -1,27 +1,32 @@
 @keyframes glow-animation {
   0% {
-    box-shadow: 0 0 150px 30px rgba(255, 30, 195, 0.454);
+    box-shadow: 0 0 50px rgba(255, 30, 195, 0.183);
   }
   50% {
-    box-shadow: 0 0 190px 50px rgba(51, 0, 255, 0.5);
+    box-shadow: 0 0 90px 10px rgba(51, 0, 255, 0.221);
   }
   100% {
-    box-shadow: 0 0 150px 30px rgba(255, 30, 195, 0.454);
+    box-shadow: 0 0 50px rgba(255, 30, 195, 0.188);
   }
 }
-.comics__banner {
-  background-color: rgb(95, 5, 76);
+.baner__wrapper {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  width: 1100px;
-  margin-top: 50px;
-  padding: 0 20px;
-  animation: glow-animation 6s infinite;
-  .banner__tittle {
-    font-weight: 700;
-    font-size: 26px;
-    text-align: start;
-    margin-right: 400px;
+  .comics__banner {
+    background-color: rgb(95, 5, 76);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1100px;
+    margin-top: 50px;
+    padding: 0 20px;
+    animation: glow-animation 6s infinite;
+    .banner__tittle {
+      font-weight: 700;
+      font-size: 26px;
+      text-align: start;
+      margin-right: 400px;
+    }
   }
 }

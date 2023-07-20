@@ -11,9 +11,12 @@
 }
 
 body {
-  background: url("../img/background.jpg") center / cover no-repeat fixed;
+  background-image: url("../img/bg_main.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
   margin: 20px 170px;
-  animation: fadeIn 3s ease;
 }
 
 ul,

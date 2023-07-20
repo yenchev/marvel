@@ -1,25 +1,34 @@
-import "./characterPage.scss";
-
-import charImg from "../../img/character.jpg";
-
+import React from "react";
 import ComicsBanner from "../comicsBanner/ComicsBanner";
-
-const CharacterPage = () => {
+import "./characterPage.scss";
+const CharacterPage = ({ character, onBackButtonClick }) => {
+  const { name, description, thumbnail } = character;
+  const charImgSrc = thumbnail ? `${thumbnail.path}.${thumbnail.extension}` : null;
+  let displayDescription;
+  if (description && description.length > 0) {
+    displayDescription = description;
+  } else {
+    displayDescription = "No description available for this character. :(";
+  }
   return (
-    <div className="char__page">
+    <div className="char__wrap">
       <ComicsBanner />
-      <div className="char__info">
-        <img src={charImg} alt="" className="char__img" />
-        <div className="char__text">
-          <div className="char__name">LOKI</div>
-          <div className="char__description">
-            In Norse mythology, Loki is a god or jötunn (or both). Loki is the son of Fárbauti and Laufey, and the brother of Helblindi and Býleistr. By the jötunn Angrboða, Loki is the father of Hel, the wolf Fenrir, and the world serpent Jörmungandr. By Sigyn, Loki is the father of Nari and/or
-            Narfi and with the stallion Svaðilfari as the father, Loki gave birth—in the form of a mare—to the eight-legged horse Sleipnir. In addition, Loki is referred to as the father of Váli in the Prose Edda.
+
+      <div className="char__page">
+        <div className="char__info">
+          <div className="char__img">
+            <img src={charImgSrc} alt={name} />
+          </div>
+          <div className="char__text">
+            <div className="char__name">{name}</div>
+            <button className="back__button" onClick={onBackButtonClick}>
+              Back to all
+            </button>
+            <div className="char__description">{displayDescription}</div>
           </div>
         </div>
       </div>
     </div>
   );
 };
-
 export default CharacterPage;

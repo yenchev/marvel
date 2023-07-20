@@ -1,4 +1,4 @@
-import "./characterSkeleton.scss"; // Підключіть CSS-файл для стилізації скелетона
+import "./characterSkeleton.scss";
 
 import ContentLoader from "react-content-loader";
 

@@ -1,31 +1,77 @@
-import "./randomCharacter.scss";
+import React, { useState, useEffect } from "react";
 import charImg from "../../img/character.jpg";
 import decoration from "../../img/Decoration.png";
+import spinner from "../../img/spinner.gif";
+import "./randomCharacter.scss";
 
-const RandomCharacter = () => {
+const RandomCharacter = ({ character, onReloadCharacter, onGoToCharacterPage }) => {
+  const { name, description, thumbnail, urls } = character || {};
+  const charImgSrc = thumbnail ? `${thumbnail.path}.${thumbnail.extension}` : charImg;
+  const truncatedName = name ? (name.length > 20 ? name.slice(0, 20) + "..." : name) : "";
+  const truncatedDescription = description ? (description.length > 100 ? description.slice(0, 200) + "..." : description) : "No description available for this character.";
+
+  const [isLoading, setIsLoading] = useState(true);
+  const [isButtonDisabled, setIsButtonDisabled] = useState(false);
+
+  useEffect(() => {
+    setIsLoading(!character);
+  }, [character]);
+
+  const handleReloadCharacter = () => {
+    if (!isButtonDisabled) {
+      setIsLoading(true);
+      setIsButtonDisabled(true);
+      onReloadCharacter();
+
+      setTimeout(() => {
+        setIsButtonDisabled(false);
+      }, 1000);
+    }
+  };
+
+  const handleGoToCharacterPage = () => {
+    onGoToCharacterPage(character);
+  };
+
+  const goToWiki = () => {
+    window.location.href = urls[1].url;
+  };
+
   return (
     <div className="container">
-      <div className="left-block">
-        <div className="character-img">
-          <img src={charImg} alt="Character" className="character-image" />
-        </div>
-        <div className="character-info">
-          <h2 className="character-name">thor</h2>
-          <p className="character-description">As the Norse God of thunder and lightning, Thor wields one of the greatest weapons ever made, the enchanted hammer Mjolnir. While others have described Thor as an over-muscled, oafish imbecile, he's quite smart and compassionate...</p>
-          <div className="buttons">
-            <button className="button home-button">HOMEPAGE</button>
-            <button className="button wiki-button">WIKI</button>
+      <div className={`left__block ${isLoading ? "loading" : ""}`}>
+        {isLoading ? (
+          <img src={spinner} alt="Loading" className="spinner" />
+        ) : (
+          <div className="loaded">
+            <div className="character__img">
+              <img src={charImgSrc} alt="Character" className="character__image" />
+            </div>
+            <div className="character__info">
+              <h2 className="character__name">{truncatedName}</h2>
+              <p className="character__description">{truncatedDescription}</p>
+              <div className="buttons">
+                <button className="button home__button" onClick={handleGoToCharacterPage}>
+                  HOMEPAGE
+                </button>
+                <button className="button wiki__button" onClick={goToWiki}>
+                  WIKI
+                </button>
+              </div>
+            </div>
           </div>
-        </div>
+        )}
       </div>
-      <div className="right-block">
-        <div className="text-block">
-          <h3 className="text-heading">
+      <div className="right__block">
+        <div className="text__block">
+          <h3 className="text__heading">
             Random character for today! <br /> Do you want to get to know him better?
           </h3>
-          <p className="text-subheading">Or choose another one</p>
+          <p className="text__subheading">Or choose another one</p>
           <div className="buttons">
-            <button className="button">TRY IT</button>
+            <button className="button" onClick={handleReloadCharacter} disabled={isButtonDisabled}>
+              TRY IT
+            </button>
           </div>
         </div>
 

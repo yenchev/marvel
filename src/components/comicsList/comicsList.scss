@@ -1,8 +1,27 @@
-.comics__list {
-  display: flex;
-  grid-template-columns: repeat(4, 1fr);
-  width: 1100px;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-top: 45px;
+.comics__list__wrapper {
+  animation: fade-in 0.5s ease-in-out forwards;
+  .loading__overlay {
+    background-color: rgba(68, 1, 75, 0.514);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.563);
+    border-radius: 5px;
+    width: 1300px;
+    height: 895px;
+    margin-top: 75px;
+  }
+  .comics__list {
+    display: flex;
+    grid-template-columns: repeat(4, 1fr);
+    width: 1300px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 45px;
+  }
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 }

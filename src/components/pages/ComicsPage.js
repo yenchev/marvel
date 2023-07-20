@@ -1,17 +1,16 @@
+import React, { useState } from "react";
 import "./comicsPage.scss";
-
-import ComicsBanner from "../comicsBanner/ComicsBanner";
 import ComicsList from "../comicsList/ComicsList";
 import ComicsInfo from "../comicsInfo/ComicsInfo";
+const ComicsPage = ({ comics }) => {
+  const [selectedComic, setSelectedComic] = useState(null);
+  const handleComicClick = (comic) => {
+    setSelectedComic(comic);
+  };
 
-const ComicsPage = () => {
-  return (
-    <div className="comics__page ">
-      <ComicsBanner />
-      <ComicsList />
-      {/* <ComicsInfo /> */}
-    </div>
-  );
+  const handleBackButtonClick = () => {
+    setSelectedComic(false);
+  };
+  return <div className="comics__page">{selectedComic ? <ComicsInfo comic={selectedComic} onBackButtonClick={handleBackButtonClick} /> : <ComicsList comics={comics} onComicClick={handleComicClick} />}</div>;
 };
-
 export default ComicsPage;

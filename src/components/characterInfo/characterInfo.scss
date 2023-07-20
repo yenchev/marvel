@@ -1,34 +1,53 @@
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .wrapper {
-  box-shadow: 0 0 30px rgb(0, 0, 0);
-  background-color: #3c0239ba;
+  outline: 1px solid rgb(133, 3, 133);
+  box-shadow: 0 0 30px rgba(209, 6, 162, 0.431);
+  background-color: #66016172;
   margin-top: 20px;
   padding: 20px;
-
+  max-width: 425px;
+  animation: fadeIn 1s ease;
   .character__info {
     height: auto;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+
     .character__info__main {
       display: flex;
       align-items: flex-start;
+      width: 425px;
+
       img {
-        widows: 150px;
+        width: 150px;
         height: 150px;
       }
-      .character__name {
-        margin-left: 40px;
-        font-style: normal;
-        font-weight: 700;
-        font-size: 22px;
-      }
-      .buttons {
-        display: flex;
-        flex-direction: column;
-        margin-top: 55px;
-        transform: translatex(-55px);
-        .button {
-          margin-top: 10px;
+
+      .name__butt__wrapp {
+        margin-left: 30px;
+        .character__name {
+          display: inline;
+          font-style: normal;
+          font-weight: 700;
+          font-size: 20px;
+          text-transform: uppercase;
+        }
+
+        .buttons {
+          display: flex;
+          flex-direction: column;
+          margin-top: 31px;
+
+          .button {
+            margin-top: 10px;
+          }
         }
       }
     }
@@ -41,24 +60,59 @@
 
     .character__comics {
       margin-top: 30px;
+      ul {
+        li {
+          font-size: 20px;
+        }
+      }
 
       h2 {
         font-weight: 700;
         font-size: 18px;
         margin-bottom: 15px;
       }
+
       li {
-        font-weight: 400;
-        font-size: 14px;
         margin: 20px 0;
         padding: 7px;
-        box-shadow: 0 0 10px rgb(0, 0, 0);
+        background-color: #ff00c820;
+        box-shadow: 0 0 15px rgba(239, 9, 255, 0.671);
+        width: 386px;
+        border-radius: 15px;
+
         &:hover {
-          box-shadow: 0 0 15px rgb(51, 0, 160);
+          background-color: #8c00ff20;
+          box-shadow: 0 0 25px rgba(81, 0, 255, 0.413);
           transform: scale(1.05);
         }
+
         &:active {
+          background-color: #8c00ff62;
           box-shadow: 0 0 35px rgb(81, 0, 255);
+        }
+      }
+    }
+
+    .no-comics {
+      font-weight: 700;
+      font-size: 20px;
+      margin: 20px 0;
+      padding: 7px;
+      border-radius: 5px;
+      animation: pulse 4s infinite;
+
+      @keyframes pulse {
+        0% {
+          box-shadow: 0 0 20px rgba(93, 0, 255, 0.425);
+          background-color: rgba(93, 0, 255, 0.224);
+        }
+        50% {
+          box-shadow: 0 0 20px rgba(255, 0, 179, 0.235);
+          background-color: rgba(255, 0, 179, 0.18);
+        }
+        100% {
+          box-shadow: 0 0 20px rgba(93, 0, 255, 0.425);
+          background-color: rgba(93, 0, 255, 0.185);
         }
       }
     }

@@ -3,45 +3,42 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 318px;
+  height: 300px;
   position: relative;
-  margin: 20px 0 50px 0;
-  box-shadow: 0 0 30px rgb(0, 0, 0);
+  margin: 10px 0 20px 0;
+  box-shadow: 0 0 30px rgba(200, 14, 188, 0.595);
 
   &:hover {
     transition: 0.4s;
     box-shadow: 0 0 30px #ff7676;
-    transform: scale(1.05);
-    z-index: +1;
+    transform: scale(1.3);
     .character__name {
       transition: 0.6s;
-      background-color: #2f0450;
+      background-color: #5f06a2;
     }
   }
   &:active {
     transition: 0.1s;
     box-shadow: 0 0 30px 10px #ff0000;
-    transform: scale(1.1);
-    z-index: +1;
-    .character__name {
-      transition: 0.1s;
-      background-color: #2f0450;
-    }
   }
 
   .character__image {
+    background-color: #2f045077;
     height: 200px;
     width: 200px;
   }
 
   .character__name {
-    height: 118px;
-    width: 200px;
-    background-color: #2f045077;
+    outline: 1px solid rgb(133, 3, 133);
+    padding: 10px;
+    height: 100px;
+    width: 100%;
+    background-color: #48057c77;
     color: #a2a2a2;
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
     font-size: 16px;
     font-weight: bold;
     text-transform: uppercase;

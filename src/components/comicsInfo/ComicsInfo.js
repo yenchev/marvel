@@ -1,29 +1,30 @@
-import "./comicsInfo.scss";
-
-import comicsImg from "../../img/comics.png";
-
+import React from "react";
 import ComicsBanner from "../comicsBanner/ComicsBanner";
-
-const ComicsInfo = () => {
+import "./comicsInfo.scss";
+const ComicsInfo = ({ comic, onBackButtonClick }) => {
+  const description = comic.description && comic.description.length > 4 ? comic.description : "This comic does not have a description.";
+  const thumbnail = comic.thumbnail && comic.thumbnail.path ? comic.thumbnail.path + "." + comic.thumbnail.extension : "";
+  const price = comic.prices && comic.prices.length > 0 ? comic.prices[0].price : 0;
+  const formattedPrice = price !== 0 ? `${price}$` : "Not available now";
   return (
     <div className="comics__info__page">
-      <ComicsBanner />
+      <ComicsBanner />  
       <div className="comics__info">
-        <img src={comicsImg} alt="" className="comics__img" />
+        {thumbnail && <img src={thumbnail} alt="" className="comics__img" />}
         <div className="comics__text">
-          <div className="comics__name">X-Men: Days of Future Past</div>
-          <div className="comics__description">
-            Re-live the legendary first journey into the dystopian future of 2013 - where Sentinels stalk the Earth, and the X-Men are humanity's only hope...until they die! Also featuring the first appearance of Alpha Flight, the return of the Wendigo, the history of the X-Men from Cyclops
-            himself...and a demon for Christmas!?
+          <div className="tittle">
+            <div className="comics__name">{comic.title}</div>
+            <button className="comics__back__button" onClick={onBackButtonClick}>
+              Back to all
+            </button>
           </div>
-          <div className="comics__pages__num">144 pages</div>
+          <div className="comics__description">{description}</div>
+          <div className="comics__pages__num">{comic.pageCount} pages</div>
           <div className="comics__lang">Language: en-us</div>
-          <div className="comics__price">9.99$</div>
+          <div className="comics__price">{formattedPrice}</div>
         </div>
-        <button className="button back__button">Back to all</button>
       </div>
     </div>
   );
 };
-
 export default ComicsInfo;
