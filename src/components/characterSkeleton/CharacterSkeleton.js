@@ -8,6 +8,7 @@ const CharacterSkeleton = (props) => {
       <h3 className="skeleton__header">Please select a character to see information</h3>
       <div className="skeleton__skeleton">
         <ContentLoader
+          className="skeleton__main"
           speed={1}
           width={425}
           height={294}

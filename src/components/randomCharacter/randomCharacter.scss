@@ -1,6 +1,6 @@
 @import "../../style/variables.scss";
 @import "../../style/button.scss";
-.container {
+.random__char__wrapper {
   width: 1100px;
   display: flex;
   justify-content: center;
@@ -32,29 +32,27 @@
       .character__info {
         width: 60%;
         margin: 0 0 0 20px;
-      }
-
-      .character__name {
-        color: rgb(175, 173, 173);
-        text-transform: uppercase;
-        font-weight: 700;
-        font-size: 22px;
-        line-height: 26px;
-        margin-top: 5px;
-        font-size: 24px;
-      }
-
-      .character__description {
-        min-height: 90px;
-        margin-top: 10px;
-        font-weight: 400;
-        font-size: 15px;
-        margin-bottom: 10px;
-      }
-      .buttons {
-        display: flex;
-        justify-content: space-around;
-        margin-top: 13px;
+        .character__name {
+          color: rgb(175, 173, 173);
+          text-transform: uppercase;
+          font-weight: 700;
+          font-size: 22px;
+          line-height: 26px;
+          margin-top: 5px;
+          font-size: 24px;
+        }
+        .character__description {
+          min-height: 90px;
+          margin-top: 10px;
+          font-weight: 400;
+          font-size: 15px;
+          margin-bottom: 10px;
+        }
+        .buttons {
+          display: flex;
+          justify-content: space-around;
+          margin-top: 13px;
+        }
       }
     }
   }

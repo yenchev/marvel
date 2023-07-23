@@ -6,10 +6,20 @@ const FindCharacter = ({ characters, onSearch }) => {
   const [isInputFocused, setIsInputFocused] = useState(false);
   const [characterNotFound, setCharacterNotFound] = useState(false);
 
+  const handleCharacterClick = () => {
+    const scrollToOffset = 360;
+    window.scrollTo({
+      top: scrollToOffset,
+      left: 0,
+      behavior: "smooth",
+    });
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const foundCharacter = characters.find((character) => character.name.toLowerCase() === searchTerm.toLowerCase());
     if (foundCharacter) {
+      handleCharacterClick();
       onSearch(searchTerm);
       setCharacterNotFound(false);
     } else {
@@ -30,18 +40,13 @@ const FindCharacter = ({ characters, onSearch }) => {
     setIsInputFocused(false);
   };
 
-  const handleCharacterClick = () => {
-    const scrollToOffset = 360;
-    window.scrollTo({
-      top: scrollToOffset,
-      left: 0,
-      behavior: "smooth",
-    });
-  };
-
   return (
     <div className="find__char">
-      <form className="find__char__form" onSubmit={(e) => {handleSubmit(e); handleCharacterClick();}}
+      <form
+        className="find__char__form"
+        onSubmit={(e) => {
+          handleSubmit(e);
+        }}
       >
         <h2 className="form__title">Or find a character by name:</h2>
         <div>

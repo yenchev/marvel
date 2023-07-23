@@ -76,19 +76,14 @@
         margin: 20px 0;
         padding: 7px;
         background-color: #ff00c820;
-        box-shadow: 0 0 15px rgba(239, 9, 255, 0.671);
+        box-shadow: 0 0 5px rgba(239, 9, 255, 0.671);
         width: 386px;
         border-radius: 15px;
 
         &:hover {
           background-color: #8c00ff20;
-          box-shadow: 0 0 25px rgba(81, 0, 255, 0.413);
+          box-shadow: 0 0 5px rgba(81, 0, 255, 0.413);
           transform: scale(1.05);
-        }
-
-        &:active {
-          background-color: #8c00ff62;
-          box-shadow: 0 0 35px rgb(81, 0, 255);
         }
       }
     }

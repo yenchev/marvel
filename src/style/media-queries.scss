@@ -1,0 +1,231 @@
+@media (max-width: 1400px) {
+  .main__page {
+    .bg__Img {
+      max-width: 250px;
+    }
+  }
+
+  .app__header {
+    width: 800px;
+    height: 35px;
+    margin-left: -113px;
+    .app__title {
+      font-size: 23px;
+    }
+    .app__menu {
+      ul {
+        font-size: 21px;
+      }
+    }
+  }
+
+  .random__char__wrapper {
+    width: 830px;
+    height: 170px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    .left__block {
+      height: 170px;
+      padding: 10px;
+      .loaded {
+        .character__img {
+          width: 150px;
+          height: 150px;
+        }
+        .character__info {
+          position: relative;
+          .character__name {
+            font-size: 18px;
+            line-height: 20px;
+            margin-top: 0px;
+          }
+          .character__description {
+            min-height: 80px;
+            margin-top: 5px;
+            margin-bottom: 0px;
+            font-weight: 400;
+            font-size: 13px;
+          }
+          .buttons {
+            margin: 5px auto;
+            position: absolute;
+            bottom: 0;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            .button {
+              height: 30px;
+            }
+          }
+        }
+      }
+    }
+
+    .left__block.loading {
+      padding-left: 135px;
+    }
+
+    .right__block {
+      height: 170px;
+      padding: 10px;
+      .text__heading {
+        margin-top: 0px;
+        font-size: 20px;
+      }
+      .text__subheading {
+        margin-top: 10px;
+        font-size: 22px;
+      }
+      .image {
+        min-height: 109px;
+        min-width: 130px;
+        margin-top: 40px;
+        margin-right: -130px;
+        transform: translateX(-100px);
+        height: 100px;
+      }
+      .buttons {
+        margin: 14px auto;
+        .button {
+          height: 30px;
+        }
+      }
+    }
+  }
+
+  .characters {
+    width: 900px;
+    margin: 30px 0 0;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .characters__list {
+    max-width: 390px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 40px;
+    margin-bottom: 20px;
+    .loading__overlay {
+      width: 420px;
+      height: 1350px;
+      margin-top: 10px;
+    }
+  }
+  .character {
+    height: 270px;
+    box-shadow: 0 0 10px rgba(255, 0, 183, 0.743);
+
+    &:hover {
+      transition: 0.4s;
+      box-shadow: 0 0 20px #ff00b7;
+      transform: scale(1.1);
+      .character__name {
+        transition: 0.6s;
+        background-color: #5f06a2;
+      }
+    }
+    &:active {
+      transition: 0.1s;
+      box-shadow: 0 0 30px #ff0000;
+    }
+
+    .character__image {
+      background-color: #2f045077;
+      height: 170px;
+      width: 200px;
+    }
+  }
+
+  .skeleton {
+    margin-top: 8px;
+    max-width: 350px;
+    height: 260px;
+    margin-left: 40px;
+    .skeleton__header {
+      padding-top: 10px;
+      padding-left: 15px;
+      font-size: 17px;
+    }
+    .skeleton__skeleton {
+      .skeleton__main {
+        width: 350px;
+        margin-top: -20px;
+      }
+    }
+  }
+
+  .wrapper {
+    margin-top: 11px;
+    padding: 10px;
+    max-width: 325px;
+    margin-left: 41px;
+    .character__info {
+      .character__info__main {
+        position: relative;
+        width: 325px;
+        img {
+          width: 130px;
+          height: 130px;
+        }
+        .name__butt__wrapp {
+          margin-left: 20px;
+          .character__name {
+            font-size: 18px;
+          }
+          .buttons {
+            margin-top: 10px;
+            position: absolute;
+            bottom: 0;
+            .button {
+              margin-top: 10px;
+              height: 30px;
+            }
+          }
+        }
+      }
+
+      .character__descr {
+        margin-top: 20px;
+        font-weight: 400;
+        font-size: 14px;
+      }
+
+      .character__comics {
+        margin-top: 20px;
+        ul {
+          li {
+            font-size: 15px;
+          }
+        }
+
+        h2 {
+          font-size: 17px;
+          margin-bottom: 5px;
+        }
+
+        li {
+          margin: 10px 0;
+          padding: 5px 10px;
+          width: 300px;
+        }
+      }
+    }
+  }
+
+  .find__char__form {
+    margin-left: 42px;
+    max-width: 325px;
+    .find__char__button {
+      height: 30px;
+    }
+  }
+
+  .load__button {
+    margin-top: 10px;
+    font-size: 22px;
+    width: 200px;
+    height: 40px;
+    box-shadow: 0 0 20px rgb(227, 0, 212);
+  }
+}

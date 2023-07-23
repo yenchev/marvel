@@ -38,7 +38,7 @@ const RandomCharacter = ({ character, onReloadCharacter, onGoToCharacterPage }) 
   };
 
   return (
-    <div className="container">
+    <div className="random__char__wrapper">
       <div className={`left__block ${isLoading ? "loading" : ""}`}>
         {isLoading ? (
           <img src={spinner} alt="Loading" className="spinner" />
