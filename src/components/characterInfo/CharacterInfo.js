@@ -22,7 +22,7 @@ const CharacterInfo = ({ name, imageUrl, description, comics, onGoToCharacterPag
   };
 
   return (
-    <div className="wrapper">
+    <div className="character__info__wrapper">
       <div className="character__info">
         <div className="character__info__main">
           <div>

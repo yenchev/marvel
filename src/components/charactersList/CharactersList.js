@@ -45,7 +45,14 @@ const CharactersList = ({ characters, onCharacterClick }) => {
 
   const handleCharacterClick = (character) => {
     onCharacterClick(character);
-    const scrollToOffset = 360;
+
+    let scrollToOffset;
+
+    if (window.innerWidth < 992) {
+      scrollToOffset = 530;
+    } else {
+      scrollToOffset = 360;
+    }
 
     window.scrollTo({
       top: scrollToOffset,

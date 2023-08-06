@@ -10,7 +10,7 @@ const AppHeader = () => {
   };
 
   return (
-    <header className="app__header">
+    <div className="app__header">
       <h1 className="app__title">
         <Link to="/" onClick={() => setActiveTab("")}>
           <span>Marvel</span> information portal
@@ -31,7 +31,7 @@ const AppHeader = () => {
           </li>
         </ul>
       </nav>
-    </header>
+    </div>
   );
 };
 

@@ -6,15 +6,16 @@
     opacity: 1;
   }
 }
-.wrapper {
+.character__info__wrapper {
   outline: 1px solid rgb(133, 3, 133);
   box-shadow: 0 0 30px rgba(209, 6, 162, 0.431);
   background-color: #66016172;
-  margin-top: 20px;
+  margin-top: 10px;
   padding: 20px;
-  max-width: 425px;
   animation: fadeIn 1s ease;
+  width: 425px;
   .character__info {
+    width: 425px;
     height: auto;
     display: flex;
     flex-direction: column;
