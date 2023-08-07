@@ -43,6 +43,9 @@
       margin: 10px;
     }
     .comics__price {
+      display: flex;
+      align-items: center;
+      justify-content: center;
       font-weight: 700;
       font-size: 14px;
       margin: 0 10px;
