@@ -25,7 +25,7 @@ const CharacterInfo = ({ name, imageUrl, description, comics, onGoToCharacterPag
     <div className="character__info__wrapper">
       <div className="character__info">
         <div className="character__info__main">
-          <div>
+          <div className="char__inf__img">
             <img src={imageUrl} alt="Character" />
           </div>
           <div className="name__butt__wrapp">

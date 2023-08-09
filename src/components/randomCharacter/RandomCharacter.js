@@ -7,7 +7,7 @@ import "./randomCharacter.scss";
 const RandomCharacter = ({ character, onReloadCharacter, onGoToCharacterPage }) => {
   const { name, description, thumbnail, urls } = character || {};
   const charImgSrc = thumbnail ? `${thumbnail.path}.${thumbnail.extension}` : charImg;
-  const truncatedName = name ? (window.innerWidth < 667 ? (name.length > 15 ? name.slice(0, 15) + "..." : name) : name.length > 20 ? name.slice(0, 20) + "..." : name) : "";
+  const truncatedName = name ? (window.innerWidth < 425 ? (name.length > 12 ? name.slice(0, 12) + "..." : name) : window.innerWidth < 667 ? (name.length > 15 ? name.slice(0, 15) + "..." : name) : name.length > 20 ? name.slice(0, 20) + "..." : name) : "";
   const truncatedDescription = description ? (description.length > 100 ? (window.innerWidth < 667 ? description.slice(0, 80) + "..." : description.slice(0, 100) + "...") : description) : "No description available for this character.";
 
   const [isLoading, setIsLoading] = useState(true);
