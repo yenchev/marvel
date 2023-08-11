@@ -41,23 +41,19 @@ const FindCharacter = ({ characters, onSearch }) => {
   };
 
   return (
-    <div className="find__char">
-      <form
-        className="find__char__form"
-        onSubmit={(e) => {
-          handleSubmit(e);
-        }}
-      >
-        <h2 className="form__title">Or find a character by name:</h2>
-        <div>
-          <input type="text" className={`find__char__input ${isInputFocused || searchTerm ? "active" : ""}`} placeholder="Enter name" value={searchTerm} onChange={handleChange} onFocus={handleInputFocus} onBlur={handleInputBlur} />
-          <button type="submit" className="button find__char__button">
-            FIND
-          </button>
-        </div>
-        <div>{characterNotFound && <p className="character__not__found">The character was not found. Check the name and try again</p>}</div>
-      </form>
-    </div>
+    <form
+      className="find__char__form"
+      onSubmit={(e) => {
+        handleSubmit(e);
+      }}
+    >
+      <h2 className="form__title">Or find a character by name:</h2>
+      <input type="text" className={`find__char__input ${isInputFocused || searchTerm ? "active" : ""}`} placeholder="Enter name" value={searchTerm} onChange={handleChange} onFocus={handleInputFocus} onBlur={handleInputBlur} />
+      <button type="submit" className="button find__char__button">
+        FIND
+      </button>
+      <div>{characterNotFound && <p className="character__not__found">The character was not found. Check the name and try again</p>}</div>
+    </form>
   );
 };
 

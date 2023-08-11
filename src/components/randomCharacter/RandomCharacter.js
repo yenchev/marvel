@@ -38,18 +38,16 @@ const RandomCharacter = ({ character, onReloadCharacter, onGoToCharacterPage }) 
   };
 
   return (
-    <div className="random__char__wrapper">
+    <div className="random__character__wrapper">
       <div className={`left__block ${isLoading ? "loading" : ""}`}>
         {isLoading ? (
           <img src={spinner} alt="Loading" className="spinner" />
         ) : (
           <div className="loaded">
-            <div className="character__img">
-              <img src={charImgSrc} alt="Character" className="character__image" />
-            </div>
-            <div className="character__info">
-              <h2 className="character__name">{truncatedName}</h2>
-              <p className="character__description">{truncatedDescription}</p>
+            <img src={charImgSrc} alt="Character" className="random__character__img" />
+            <div className="random__character__info">
+              <h2 className="random__character__name">{truncatedName}</h2>
+              <p className="random__character__description">{truncatedDescription}</p>
               <div className="buttons">
                 <button className="button home__button" onClick={handleGoToCharacterPage}>
                   HOMEPAGE

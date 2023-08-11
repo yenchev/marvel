@@ -16,7 +16,7 @@
       max-width: 250px;
     }
 
-    .random__char__wrapper {
+    .random__character__wrapper {
       width: 830px;
       height: 170px;
       margin-top: 50px;
@@ -25,33 +25,34 @@
         height: 170px;
         padding: 10px;
         .loaded {
-          .character__img {
+          display: flex;
+          justify-content: space-between;
+          width: 60%;
+          .random__character__img {
             width: 150px;
             height: 150px;
           }
-          .character__info {
-            position: relative;
-            .character__name {
-              font-size: 18px;
+          .random__character__info {
+            padding-right: 10px;
+            .random__character__name {
+              font-size: 16px;
               line-height: 20px;
               margin-top: 0px;
             }
-            .character__description {
+            .random__character__description {
               min-height: 80px;
               margin-top: 5px;
               margin-bottom: 0px;
-              font-weight: 400;
               font-size: 13px;
             }
             .buttons {
-              margin: 5px auto;
-              position: absolute;
-              bottom: 0;
+              margin: 0 auto;
               display: flex;
-              justify-content: space-between;
+              justify-content: center;
               width: 100%;
               .button {
                 height: 30px;
+                margin: 0 10px;
               }
             }
           }
@@ -151,69 +152,65 @@
         }
       }
     }
-
-    .character__info__wrapper {
-      margin-top: 11px;
+    .character__info {
+      margin-left: 42px;
+      width: 350px;
       padding: 10px;
-      max-width: 350px;
-      margin-left: 41px;
-      .character__info {
-        .character__info__main {
-          position: relative;
-          width: 325px;
-          img {
-            width: 130px;
-            height: 130px;
-          }
-          .name__butt__wrapp {
-            margin-left: 20px;
-            .character__name {
-              font-size: 18px;
-            }
-            .buttons {
-              margin-top: 10px;
-              position: absolute;
-              bottom: 0;
-              .button {
-                margin-top: 10px;
-                height: 30px;
-              }
-            }
-          }
+      .character__name {
+        font-size: 20px;
+      }
+      .buttons {
+        margin-top: 20px;
+        padding: 0 10px;
+        .button {
+          height: 40px;
+          width: 130px;
+          font-size: 20px;
         }
-
-        .character__descr {
-          margin-top: 20px;
-          font-weight: 400;
-          font-size: 14px;
+      }
+      .character__descr {
+        margin-top: 20px;
+        font-size: 17px;
+        text-align: justify;
+      }
+      .character__comics {
+        width: 100%;
+        text-align: center;
+        margin-top: 20px;
+        .comics__title {
+          font-size: 22px;
         }
-
-        .character__comics {
-          margin-top: 20px;
-          ul {
-            li {
-              font-size: 15px;
+        .comics__list {
+          .comics__item {
+            font-size: 19px;
+            margin: 20px 0;
+            padding: 7px;
+            background-color: #ff00c820;
+            box-shadow: 0 0 5px rgba(239, 9, 255, 0.671);
+            width: 100%;
+            border-radius: 15px;
+            &:hover {
+              background-color: #8c00ff20;
+              box-shadow: 0 0 5px rgba(81, 0, 255, 0.413);
+              transform: scale(1.05);
             }
-          }
-
-          h2 {
-            font-size: 17px;
-            margin-bottom: 5px;
-          }
-
-          li {
-            margin: 10px 0;
-            padding: 5px 10px;
-            width: 325px;
           }
         }
       }
     }
 
     .find__char__form {
+      text-align: center;
       margin-left: 42px;
-      max-width: 350px;
+      width: 350px;
+      padding: 15px;
+      .find__char__input {
+        margin: 20px auto;
+        width: 100%;
+      }
       .find__char__button {
+        margin: 10px auto;
+        margin-bottom: 0;
         height: 30px;
       }
     }
@@ -229,16 +226,6 @@
   }
 }
 @media (max-width: 992px) {
-  .button:hover {
-    transform: none;
-    box-shadow: none;
-  }
-  .find__char__button:hover {
-    box-shadow: 0 0 10px rgb(134, 124, 252);
-  }
-  .load__button:hover {
-    outline: none;
-  }
   .app__header {
     width: 95vw;
     height: 35px;
@@ -258,49 +245,49 @@
     .bg__Img {
       max-width: 200px;
     }
-
-    .random__char__wrapper {
-      border-radius: 10px;
-      width: 600px;
-      height: 400px;
-      margin-top: 50px;
-      margin-bottom: 50px;
+    .random__character__wrapper {
       display: table-column;
+      width: 80vw;
+      height: 420px;
+      margin-top: 40px;
+      margin-bottom: 50px;
       .left__block {
-        border-radius: 10px 10px 0 0;
+        height: 220px;
         width: 100%;
-        height: 200px;
         padding: 10px;
         .loaded {
+          justify-content: center;
           width: 100%;
-          .character__img {
-            width: 180px;
-            height: 180px;
+          .random__character__img {
+            width: 220px;
+            height: 200px;
+            margin-left: 5px;
+            margin-right: 20px;
           }
-          .character__info {
-            width: 65%;
-            position: relative;
-            .character__name {
-              font-size: 19px;
+          .random__character__info {
+            width: 60%;
+            padding-right: 10px;
+            text-align: center;
+            .random__character__name {
+              font-size: 20px;
               line-height: 20px;
               margin-top: 0px;
-              margin-left: 5px;
             }
-            .character__description {
+            .random__character__description {
               min-height: 80px;
-              margin-top: 10px;
+              margin-top: 15px;
               margin-bottom: 0px;
-              font-weight: 400;
-              font-size: 17px;
+              font-size: 18px;
+              text-align: center;
             }
             .buttons {
-              margin: 5px auto;
-              position: absolute;
-              bottom: 0;
+              margin: 0 auto;
               display: flex;
-              justify-content: space-around;
+              justify-content: center;
               width: 100%;
+              transform: translateY(40px);
               .button {
+                margin: 0 5%;
                 height: 35px;
               }
             }
@@ -309,47 +296,68 @@
       }
 
       .left__block.loading {
-        padding-left: 210px;
-      }
-      .right__block {
-        border-radius: 0 0 10px 10px;
+        padding: 0;
+        margin: 0;
         width: 100%;
-        height: 200px;
-        padding: 10px;
-        .text__heading {
-          margin-top: 0px;
-          margin-left: 10px;
-          font-size: 22px;
-        }
-        .text__subheading {
+        height: 220px;
+        display: block;
+        text-align: center;
+        .spinner {
+          height: 90%;
           margin-top: 10px;
-          margin-left: 30px;
-          font-size: 28px;
+        }
+      }
+
+      .right__block {
+        height: 200px;
+        width: 100%;
+        display: flex;
+        margin: none;
+        text-align: center;
+        .text__block {
+          width: 100%;
+          margin: auto;
+          padding-right: 70px;
+          .text__heading {
+            width: auto;
+            text-align: center;
+            font-size: 24px;
+            margin-top: 0;
+          }
+
+          .text__subheading {
+            font-size: 23px;
+            text-align: center;
+            margin-top: 30px;
+          }
         }
         .image {
-          min-height: 150px;
-          min-width: 160px;
-          margin: 0;
-          transform: translateX(70px) translateY(20px);
+          height: 120px;
+          width: 150px;
+          margin-top: 60px;
+          transform: translateX(-130px);
         }
         .buttons {
-          margin: 24px auto;
+          margin-top: 20px;
           .button {
             height: 35px;
           }
         }
       }
+      .button:hover {
+        transform: none;
+        box-shadow: none;
+      }
     }
-
     .characters {
-      max-width: 95vw;
+      width: 100%;
       margin: auto;
       display: table-column;
 
       .characters__characters__list {
         display: flex;
         justify-content: center;
-        margin-top: 40px;
+        margin-top: 30px;
         margin-bottom: 20px;
         .characters__list {
           display: grid;
@@ -360,9 +368,7 @@
         }
 
         .loading__overlay {
-          min-width: 194%;
-          height: 873px;
-          margin-top: 10px;
+          display: none;
         }
 
         .character {
@@ -397,9 +403,10 @@
       }
       .characters__character__info {
         margin: auto;
+        width: 80vw;
         .skeleton {
-          max-width: 65%;
-          height: 260px;
+          max-width: 70%;
+          height: 270px;
           margin: auto;
           margin-top: 20px;
           border-radius: 10px;
@@ -409,92 +416,97 @@
             font-size: 22px;
           }
           .skeleton__skeleton {
-            svg.skeleton__main {
-              width: 350px;
-              height: 230px;
+            width: 100%;
+            .skeleton__main {
+              width: 80%;
+              height: 260px;
               margin-top: 0;
             }
           }
         }
 
-        .character__info__wrapper {
-          min-width: 90%;
+        .character__info {
           margin: auto;
           padding: 20px;
-          margin-top: 20px;
-          border-radius: 5px;
-          .character__info {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          .char__inf__img {
+            margin: auto;
+            width: 60%;
+            height: 350px;
+            margin-bottom: 20px;
+          }
+          .character__name {
+            font-size: 22px;
+          }
+          .buttons {
             width: 100%;
-            .character__info__main {
-              width: 100%;
-              img {
-                width: 250px;
-                height: 250px;
-              }
-              .name__butt__wrapp {
-                width: 100%;
-                margin-left: 30px;
-                .character__name {
-                  font-size: 22px;
-                  margin-left: 20px;
-                }
-                .buttons {
-                  margin-top: 10px;
-                  margin-left: 20px;
-                  position: absolute;
-                  bottom: 0;
-                  width: 200px;
-                  .button {
-                    font-size: 20px;
-                    margin-top: 30px;
-                    height: 40px;
-                    min-width: 150px;
-                  }
-                }
-              }
-            }
-
-            .character__descr {
-              margin-top: 20px;
-              font-weight: 400;
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+            padding: 0 30px;
+            .button {
+              height: 38px;
+              width: 130px;
               font-size: 18px;
+              margin: 0 20px;
             }
+            .button:hover {
+              transition: none;
+              transform: none;
+              box-shadow: none;
+            }
+          }
 
-            .character__comics {
+          .character__descr {
+            margin-top: 30px;
+            font-size: 19px;
+          }
+
+          .character__comics {
+            margin-top: 0;
+            .comics__title {
+              font-size: 22px;
+              text-align: center;
+            }
+            .comics__list {
               width: 100%;
-              margin-top: 20px;
-              ul {
-                li {
-                  font-size: 19px;
-                }
-              }
-
-              h2 {
-                font-size: 21px;
-                margin-bottom: 20px;
-              }
-
-              li {
-                margin: 15px 0;
-                padding: 5px 10px;
+              .comics__item {
+                font-size: 20px;
+                margin: 20px 0;
+                padding: 7px;
+                background-color: #ff00c820;
+                box-shadow: 0 0 5px rgba(239, 9, 255, 0.671);
                 width: 100%;
+                border-radius: 15px;
+                &:hover {
+                  transform: none;
+                }
               }
             }
           }
         }
-      }
 
-      .find__char__form {
-        min-width: 90%;
-        margin: 0 auto;
-        margin-top: 40px;
-        .find__char__input {
-          width: 70%;
-          margin-top: 0;
-        }
-        .find__char__button {
-          height: 40px;
-          margin-left: 10px;
+        .find__char__form {
+          width: 80%;
+          margin: 0 auto;
+          margin-top: 60px;
+          margin-bottom: 70px;
+          .find__char__input {
+            width: 90%;
+            margin-top: 10px;
+            margin-bottom: 30px;
+            text-align: center;
+          }
+          .find__char__button {
+            margin: auto;
+            height: 33px;
+            box-shadow: none;
+          }
+          .find__char__button:hover {
+            transform: none;
+          }
         }
       }
 
@@ -503,6 +515,11 @@
         font-size: 22px;
         width: 200px;
         height: 50px;
+        box-shadow: 0 0 20px rgb(227, 0, 212);
+      }
+      .load__button:hover {
+        transform: none;
+        outline: none;
         box-shadow: 0 0 20px rgb(227, 0, 212);
       }
     }
@@ -1043,10 +1060,6 @@
   }
 }
 @media (max-width: 425px) {
-  header {
-    display: grid;
-    justify-content: center;
-  }
   .app__header {
     margin: 0 auto;
     width: 90vw;
@@ -1065,8 +1078,7 @@
     }
   }
   img.bg__Img {
-    display: no;
-    transform: scale(0.7) translate(-120px);
+    display: none;
   }
   .random__char__wrapper {
     .left__block.loading {

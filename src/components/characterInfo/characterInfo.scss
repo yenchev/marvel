@@ -6,81 +6,66 @@
     opacity: 1;
   }
 }
-.character__info__wrapper {
-  outline: 1px solid rgb(133, 3, 133);
-  box-shadow: 0 0 30px rgba(209, 6, 162, 0.431);
+
+.character__info {
+  box-shadow: 0 0 10px rgba(81, 0, 255, 0.772);
   background-color: #66016172;
   margin-top: 10px;
   padding: 20px;
   animation: fadeIn 1s ease;
   width: 425px;
-  .character__info {
-    width: 425px;
-    height: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  .char__inf__img {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .character__name {
+    width: 100%;
+    margin: auto;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  .buttons {
+    width: 100%;
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-
-    .character__info__main {
-      display: flex;
-      align-items: flex-start;
-      width: 425px;
-
-      img {
-        width: 150px;
-        height: 150px;
-      }
-
-      .name__butt__wrapp {
-        margin-left: 30px;
-        .character__name {
-          display: inline;
-          font-style: normal;
-          font-weight: 700;
-          font-size: 20px;
-          text-transform: uppercase;
-        }
-
-        .buttons {
-          display: flex;
-          flex-direction: column;
-          margin-top: 31px;
-
-          .button {
-            margin-top: 10px;
-          }
-        }
-      }
+    justify-content: space-around;
+    margin-top: 30px;
+    padding: 0 30px;
+    .button {
+      height: 50px;
+      width: 140px;
+      font-size: 22px;
     }
+  }
 
-    .character__descr {
-      margin-top: 30px;
-      font-weight: 400;
-      font-size: 14px;
+  .character__descr {
+    margin-top: 30px;
+    font-weight: 400;
+    font-size: 19px;
+    text-align: center;
+  }
+
+  .character__comics {
+    .comics__title {
+      font-size: 25px;
+      text-align: center;
     }
-
-    .character__comics {
-      margin-top: 30px;
-      ul {
-        li {
-          font-size: 20px;
-        }
-      }
-
-      h2 {
-        font-weight: 700;
-        font-size: 18px;
-        margin-bottom: 15px;
-      }
-
-      li {
+    margin-top: 30px;
+    .comics__list {
+      .comics__item {
+        font-size: 20px;
         margin: 20px 0;
         padding: 7px;
         background-color: #ff00c820;
         box-shadow: 0 0 5px rgba(239, 9, 255, 0.671);
         width: 386px;
         border-radius: 15px;
-
         &:hover {
           background-color: #8c00ff20;
           box-shadow: 0 0 5px rgba(81, 0, 255, 0.413);
@@ -88,28 +73,28 @@
         }
       }
     }
+  }
 
-    .no-comics {
-      font-weight: 700;
-      font-size: 20px;
-      margin: 20px 0;
-      padding: 7px;
-      border-radius: 5px;
-      animation: pulse 4s infinite;
+  .no-comics {
+    font-weight: 700;
+    font-size: 20px;
+    margin: 20px 0;
+    padding: 7px;
+    border-radius: 5px;
+    animation: pulse 3s infinite;
 
-      @keyframes pulse {
-        0% {
-          box-shadow: 0 0 20px rgba(93, 0, 255, 0.425);
-          background-color: rgba(93, 0, 255, 0.224);
-        }
-        50% {
-          box-shadow: 0 0 20px rgba(255, 0, 179, 0.235);
-          background-color: rgba(255, 0, 179, 0.18);
-        }
-        100% {
-          box-shadow: 0 0 20px rgba(93, 0, 255, 0.425);
-          background-color: rgba(93, 0, 255, 0.185);
-        }
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 0 20px rgba(93, 0, 255, 0.425);
+        background-color: rgba(93, 0, 255, 0.224);
+      }
+      50% {
+        box-shadow: 0 0 20px rgba(255, 0, 179, 0.235);
+        background-color: rgba(255, 0, 179, 0.18);
+      }
+      100% {
+        box-shadow: 0 0 20px rgba(93, 0, 255, 0.425);
+        background-color: rgba(93, 0, 255, 0.185);
       }
     }
   }

@@ -1,12 +1,15 @@
 @keyframes glow-animation {
   0% {
-    box-shadow: 0 0 50px rgba(255, 30, 195, 0.183);
+    box-shadow: 0 0 30px rgba(255, 30, 195, 0.694);
+    outline: 2px solid rgba(115, 0, 255, 0.516);
   }
   50% {
-    box-shadow: 0 0 90px 10px rgba(51, 0, 255, 0.221);
+    box-shadow: 0 0 90px 10px rgba(51, 0, 255, 0.418);
+    outline: 2px solid rgba(255, 0, 0, 0.38);
   }
   100% {
-    box-shadow: 0 0 50px rgba(255, 30, 195, 0.188);
+    box-shadow: 0 0 30px rgba(255, 30, 195, 0.694);
+    outline: 2px solid rgba(115, 0, 255, 0.516);
   }
 }
 .baner__wrapper {

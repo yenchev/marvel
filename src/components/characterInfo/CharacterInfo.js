@@ -1,14 +1,6 @@
 import React from "react";
 import "./characterInfo.scss";
 const CharacterInfo = ({ name, imageUrl, description, comics, onGoToCharacterPage, urls }) => {
-  const truncateName = (name, maxLength) => {
-    if (name.length <= maxLength) {
-      return name;
-    } else {
-      return name.substring(0, maxLength) + "...";
-    }
-  };
-  const truncatedName = truncateName(name, 18);
   const handleGoToHomePage = () => {
     onGoToCharacterPage({
       name,
@@ -22,44 +14,37 @@ const CharacterInfo = ({ name, imageUrl, description, comics, onGoToCharacterPag
   };
 
   return (
-    <div className="character__info__wrapper">
-      <div className="character__info">
-        <div className="character__info__main">
-          <div className="char__inf__img">
-            <img src={imageUrl} alt="Character" />
-          </div>
-          <div className="name__butt__wrapp">
-            <div className="character__name">{truncatedName}</div>
-            <div className="buttons">
-              <button className="button home-button" onClick={handleGoToHomePage}>
-                HOMEPAGE
-              </button>
-              <button className="button wiki-button" onClick={goToWiki}>
-                WIKI
-              </button>
-            </div>
-          </div>
-        </div>
-        <div className="character__descr">{description}</div>
-        <div className="character__comics">
-          <h2>Comics:</h2>
-          {comics.items && comics.items.length > 0 ? (
-            <ul>
-              {comics.items.map((comic, index) => (
-                <li
-                  key={index}
-                  onClick={() => {
-                    window.location.href = comic.resourceURI;
-                  }}
-                >
-                  {comic.name}
-                </li>
-              ))}
-            </ul>
-          ) : (
-            <p className="no-comics">This character does not have any comics.</p>
-          )}
-        </div>
+    <div className="character__info">
+      <img src={imageUrl} alt="Character" className="char__inf__img" />
+      <div className="character__name">{name}</div>
+      <div className="buttons">
+        <button className="button home-button" onClick={handleGoToHomePage}>
+          HOMEPAGE
+        </button>
+        <button className="button wiki-button" onClick={goToWiki}>
+          WIKI
+        </button>
+      </div>
+      <div className="character__descr">{description}</div>
+      <div className="character__comics">
+        <h2 className="comics__title">Comics</h2>
+        {comics.items && comics.items.length > 0 ? (
+          <ul className="comics__list">
+            {comics.items.map((comic, index) => (
+              <li
+                key={index}
+                className="comics__item"
+                onClick={() => {
+                  window.location.href = comic.resourceURI;
+                }}
+              >
+                {comic.name}
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <p className="no-comics">This character does not have any comics.</p>
+        )}
       </div>
     </div>
   );
