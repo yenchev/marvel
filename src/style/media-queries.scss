@@ -856,18 +856,6 @@
   }
 }
 @media (max-width: 425px) {
-  body {
-    background-image: url("../img/bg_main.jpg");
-    background-position: inherit;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    -webkit-background-attachment: fixed;
-    margin: 0 auto;
-    margin: 20px;
-    display: flex;
-    justify-content: center;
-  }
   .bg__Img {
     width: 40%;
   }
