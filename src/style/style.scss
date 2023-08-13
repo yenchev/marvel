@@ -10,10 +10,11 @@
 }
 
 body {
+  height: 100%;
   background-image: url("../img/bg_main.jpg");
-  background-position: inherit;
+  background-position: center;
   background-repeat: no-repeat;
-  background-size: auto;
+  background-size: 190vh;
   background-attachment: fixed;
   -webkit-background-attachment: fixed;
   margin: 0 auto;
