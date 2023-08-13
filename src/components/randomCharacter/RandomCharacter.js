@@ -7,8 +7,37 @@ import "./randomCharacter.scss";
 const RandomCharacter = ({ character, onReloadCharacter, onGoToCharacterPage }) => {
   const { name, description, thumbnail, urls } = character || {};
   const charImgSrc = thumbnail ? `${thumbnail.path}.${thumbnail.extension}` : charImg;
-  const truncatedName = name ? (window.innerWidth < 425 ? (name.length > 12 ? name.slice(0, 12) + "..." : name) : window.innerWidth < 667 ? (name.length > 15 ? name.slice(0, 15) + "..." : name) : name.length > 20 ? name.slice(0, 20) + "..." : name) : "";
-  const truncatedDescription = description ? (description.length > 100 ? (window.innerWidth < 667 ? description.slice(0, 80) + "..." : description.slice(0, 100) + "...") : description) : "No description available for this character.";
+  const truncatedName = name
+    ? window.innerWidth < 425
+      ? name.length > 12
+        ? name.slice(0, 12) + "..."
+        : name
+      : window.innerWidth < 667
+      ? name.length > 15
+        ? name.slice(0, 22) + "..."
+        : name
+      : window.innerWidth < 800
+      ? name.length > 35
+        ? name.slice(0, 35) + "..."
+        : name
+      : name.length > 20
+      ? name.slice(0, 20) + "..."
+      : name
+    : "";
+
+  const truncatedDescription = description
+    ? window.innerWidth < 667
+      ? description.length > 80
+        ? description.slice(0, 80) + "..."
+        : description
+      : window.innerWidth < 800
+      ? description.length > 200
+        ? description.slice(0, 200) + "..."
+        : description
+      : description.length > 150
+      ? description.slice(0, 150) + "..."
+      : description
+    : "No description available for this character.";
 
   const [isLoading, setIsLoading] = useState(true);
   const [isButtonDisabled, setIsButtonDisabled] = useState(false);
