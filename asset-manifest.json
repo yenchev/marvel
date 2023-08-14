@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/marvel/static/css/main.b2b12a60.css",
+    "main.css": "/marvel/static/css/main.fbbfb7c1.css",
     "main.js": "/marvel/static/js/main.a1335e0e.js",
+    "static/media/bg_main.jpg": "/marvel/static/media/bg_main.a6cc71a59289ddfe4059.jpg",
     "static/media/spinner.gif": "/marvel/static/media/spinner.3d61e471e768c208950b.gif",
-    "static/media/bg_mobile.jpg": "/marvel/static/media/bg_mobile.52880fbe6440d0570208.jpg",
     "static/media/bg down.png": "/marvel/static/media/bg down.96cbe09bed67b0d04328.png",
     "static/media/character.jpg": "/marvel/static/media/character.8e1ecf9a7b00dd9d291d.jpg",
     "static/media/Decoration.png": "/marvel/static/media/Decoration.4877bd12f637c476f009.png",
     "static/media/Avengers.png": "/marvel/static/media/Avengers.23ae6addf9f7a06910b5.png",
     "static/media/Avengers logo.png": "/marvel/static/media/Avengers logo.907cc9033aa5c42ea32f.png",
     "index.html": "/marvel/index.html",
-    "main.b2b12a60.css.map": "/marvel/static/css/main.b2b12a60.css.map",
+    "main.fbbfb7c1.css.map": "/marvel/static/css/main.fbbfb7c1.css.map",
     "main.a1335e0e.js.map": "/marvel/static/js/main.a1335e0e.js.map"
   },
   "entrypoints": [
-    "static/css/main.b2b12a60.css",
+    "static/css/main.fbbfb7c1.css",
     "static/js/main.a1335e0e.js"
   ]
 }
