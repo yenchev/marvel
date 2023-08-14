@@ -47,23 +47,15 @@
   box-shadow: 0 0 10px rgb(134, 124, 252);
 }
 .back__button {
-  position: relative;
-  top: -88px;
-  right: -720px;
-  width: 130px;
+  width: 110px;
   height: 30px;
-  margin-top: 40px;
-  margin-bottom: 40px;
-  font-size: 21px;
+  font-size: 16px;
   color: #888686;
   font-weight: 600;
-  border-radius: 10px;
+  border-radius: 20px;
   border: none;
-  animation: colorChange 1.5s infinite alternate;
+  animation: colorChange 1s infinite alternate;
   text-transform: uppercase;
-}
-.back__button:hover {
-  outline: 2px solid rgba(51, 0, 255, 0.721);
 }
 
 .comics__back__button {
@@ -90,11 +82,10 @@
 @keyframes colorChange {
   0% {
     background-color: rgba(205, 2, 148, 0.148);
-    box-shadow: 0 0 20px rgba(255, 28, 187, 0.17);
+    outline: 2px solid rgba(51, 0, 255, 0.721);
   }
   100% {
     background-color: rgba(0, 0, 255, 0.316);
-    box-shadow: 0 0 20px rgba(25, 0, 255, 0.381);
-    transform: scale(1.2);
+    outline: 2px solid rgba(51, 0, 255, 0.721);
   }
 }

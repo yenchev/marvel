@@ -8,15 +8,15 @@ const ComicsInfo = ({ comic, onBackButtonClick }) => {
   const formattedPrice = price !== 0 ? `${price}$` : "Not available now";
   return (
     <div className="comics__info__page">
-      <ComicsBanner />  
+      <ComicsBanner />
+      <button className="comics__back__button" onClick={onBackButtonClick}>
+        Back to all
+      </button>
       <div className="comics__info">
         {thumbnail && <img src={thumbnail} alt="" className="comics__img" />}
         <div className="comics__text">
           <div className="tittle">
             <div className="comics__name">{comic.title}</div>
-            <button className="comics__back__button" onClick={onBackButtonClick}>
-              Back to all
-            </button>
           </div>
           <div className="comics__description">{description}</div>
           <div className="comics__pages__num">{comic.pageCount} pages</div>

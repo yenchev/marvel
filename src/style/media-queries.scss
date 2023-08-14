@@ -222,6 +222,221 @@
       height: 40px;
       box-shadow: 0 0 20px rgb(227, 0, 212);
     }
+
+    .char__wrap {
+      width: 90vw;
+      .baner__wrapper {
+        .comics__banner {
+          width: 85%;
+          margin-top: 50px;
+          padding: 0 10px;
+          .banner__tittle {
+            font-size: 20px;
+            margin-right: 200px;
+          }
+        }
+      }
+      .char__page {
+        margin: auto;
+        width: 95%;
+        max-width: 1150px;
+        height: auto;
+        background-color: rgba(122, 5, 69, 0.605);
+        box-shadow: 0 0 10px rgb(136, 0, 255);
+        border-radius: 10px;
+        padding: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-top: 70px;
+        .char__page__img__wrapp {
+          max-width: 270px;
+          display: flex;
+          align-items: center;
+          justify-content: left;
+          padding: 0;
+          margin: 0;
+          .char__img img {
+            margin-top: 5px;
+            width: 20vw;
+            max-width: 300px;
+          }
+        }
+        .char__text {
+          margin-right: 30px;
+          margin-left: 0;
+          margin-top: 8px;
+          display: flex;
+          flex-direction: column;
+          .char__name {
+            text-align: center;
+            font-size: 22px;
+            line-height: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+          }
+          .char__description {
+            text-align: center;
+            margin-top: 15px;
+            margin-left: 30px;
+            font-weight: 400;
+            font-size: 20px;
+          }
+        }
+        .char__page__buttons {
+          margin-top: 4px;
+          display: flex;
+          .back__button {
+            width: 90px;
+            height: 28px;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+  .comics__page {
+    width: 95vw;
+    .baner__wrapper {
+      .comics__banner {
+        width: 85%;
+        margin-top: 50px;
+        padding: 0 10px;
+        .left__banner_img {
+          width: 10vw;
+        }
+        .banner__tittle {
+          font-size: 2vw;
+          margin: 0 auto;
+        }
+        .right__banner_img {
+          width: 8vw;
+        }
+      }
+    }
+    .comics__list__wrapper {
+      width: 100%;
+      margin: 0 auto;
+      .loading__overlay {
+        display: none;
+      }
+      .comics__list {
+        width: 82%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin-top: 45px;
+        margin-bottom: 20px;
+        .comics {
+          display: flex;
+          width: 19vw;
+          height: 26vw;
+          margin: 30px auto;
+
+          .comics__image {
+            width: 100%;
+            height: 80%;
+          }
+          .comics__name__wrapp {
+            width: 100%;
+            height: 20%;
+            .comics__name {
+              font-size: 1vw;
+              text-transform: uppercase;
+              margin: 10px;
+            }
+            .comics__price {
+              font-size: 1vw;
+              color: #e24141;
+            }
+          }
+        }
+      }
+      .load__button {
+        margin: 0 auto;
+        font-size: 21px;
+        width: 180px;
+        height: 40px;
+        border-radius: 40px;
+        box-shadow: 0 0 10px rgb(227, 0, 212);
+      }
+    }
+    .comics__info__page {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: auto;
+      .baner__wrapper {
+        width: 90vw;
+        .comics__banner {
+          margin-top: 50px;
+          padding: 0 10px;
+          .left__banner_img {
+            width: 10vw;
+          }
+          .banner__tittle {
+            font-size: 2vw;
+            margin: 0 auto;
+          }
+          .right__banner_img {
+            width: 8vw;
+          }
+        }
+      }
+      .comics__info {
+        border-radius: 10px;
+        padding: 20px;
+        display: flex;
+        align-items: flex-start;
+        margin-top: 20px;
+        width: 90vw;
+      }
+
+      .comics__img {
+        width: 30%;
+        margin-top: 1vw;
+        height: auto;
+        margin-right: 10px;
+      }
+
+      .comics__text {
+        width: 70%;
+        margin-left: 2vw;
+        .tittle {
+          width: auto;
+          .comics__name {
+            margin: 0;
+            margin-top: 1vw;
+            font-size: 1.5vw;
+            max-width: 780px;
+          }
+        }
+
+        .comics__description {
+          margin-top: 2vw;
+          font-size: 1.8vw;
+          line-height: 2.5vw;
+        }
+        .comics__pages__num {
+          margin-top: 2vw;
+          font-size: 1.9vw;
+        }
+        .comics__lang {
+          margin-top: 2vw;
+          font-size: 1.9vw;
+        }
+        .comics__price {
+          margin-top: 2vw;
+          font-size: 2.5vw;
+        }
+        .comics__back__button {
+          width: 10vw;
+          height: 3vw;
+          font-size: 1.5vw;
+        }
+      }
+    }
   }
 }
 @media (max-width: 992px) {
@@ -520,6 +735,49 @@
         box-shadow: 0 0 20px rgb(227, 0, 212);
       }
     }
+    .char__wrap {
+      width: 90vw;
+      .baner__wrapper {
+        .comics__banner {
+          .banner__tittle {
+            font-size: 18px;
+            margin-right: 50px;
+          }
+        }
+      }
+      .char__page {
+        padding: 25px;
+        margin-top: 70px;
+        .char__page__img__wrapp {
+          max-width: 250px;
+          .char__img img {
+            margin: auto;
+            width: 25vw;
+            max-width: 250px;
+          }
+        }
+        .char__text {
+          margin: 5px auto;
+          .char__name {
+            font-size: 20px;
+            margin-bottom: 5px;
+          }
+          .char__description {
+            margin-top: 10px;
+            margin-left: 10px;
+            font-size: 17px;
+          }
+        }
+        .char__page__buttons {
+          margin-right: -5px;
+          .back__button {
+            width: 80px;
+            height: 25px;
+            font-size: 13px;
+          }
+        }
+      }
+    }
   }
 }
 @media (max-width: 800px) {
@@ -689,6 +947,126 @@
         }
       }
     }
+    .char__wrap {
+      .baner__wrapper {
+        .comics__banner {
+          width: 90%;
+          padding: 0 20px;
+          .left__banner_img {
+            width: 120px;
+          }
+          .banner__tittle {
+            font-size: 15px;
+            text-align: start;
+          }
+          .right__banner_img {
+            width: 110px;
+          }
+        }
+      }
+      .char__page {
+        width: 90vw;
+        .char__page__img__wrapp {
+          width: 25vw;
+          max-width: 200px;
+          margin: auto 0;
+          .char__img {
+            width: 25vw;
+            max-width: 200px;
+            margin: auto 0;
+          }
+        }
+
+        .char__text {
+          margin: 5px auto;
+          .char__name {
+            font-size: 18px;
+            margin-bottom: 5px;
+          }
+          .char__description {
+            margin-top: 10px;
+            margin-left: 10px;
+            font-size: 15px;
+          }
+        }
+        .char__page__buttons {
+          margin-right: -5px;
+          .back__button {
+            width: 80px;
+            height: 25px;
+            font-size: 13px;
+          }
+        }
+      }
+    }
+  }
+  .comics__page {
+    width: 95vw;
+    .baner__wrapper {
+      .comics__banner {
+        width: 85%;
+        margin-top: 50px;
+        padding: 0 10px;
+        .banner__tittle {
+          font-size: 2.5vw;
+          margin: 0 auto;
+        }
+      }
+    }
+    .comics__list__wrapper {
+      width: 100%;
+      margin: 0 auto;
+      .loading__overlay {
+        display: none;
+      }
+      .comics__list {
+        width: 82%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin-top: 45px;
+        margin-bottom: 20px;
+        .comics {
+          display: flex;
+          width: 19vw;
+          height: 26vw;
+          margin: 30px auto;
+
+          .comics__image {
+            width: 100%;
+            height: 80%;
+          }
+          .comics__name__wrapp {
+            width: 100%;
+            height: 20%;
+            .comics__name {
+              font-size: 1vw;
+              margin: 2px;
+            }
+            .comics__price {
+              font-size: 1vw;
+            }
+          }
+        }
+      }
+      .load__button {
+        margin: 0 auto;
+        font-size: 2vw;
+        width: 20vw;
+        height: 5vw;
+        border-radius: 40px;
+        box-shadow: 0 0 10px rgb(227, 0, 212);
+      }
+    }
+    .comics__info__page {
+      .comics__text {
+        .tittle {
+          .comics__name {
+            font-size: 1.3vw;
+          }
+        }
+      }
+    }
   }
 }
 @media (max-width: 667px) {
@@ -853,6 +1231,210 @@
         height: 30px;
       }
     }
+    .char__wrap {
+      width: 100%;
+      .baner__wrapper {
+        .comics__banner {
+          width: 90%;
+          padding: 0 10px;
+          .left__banner_img {
+            width: 80px;
+          }
+          .banner__tittle {
+            font-size: 12px;
+            text-align: center;
+            margin-right: 10px;
+          }
+          .right__banner_img {
+            width: 80px;
+          }
+        }
+      }
+      .char__page {
+        display: grid;
+        flex-direction: column;
+        min-width: 95%;
+        height: auto;
+        padding: 30px 10px 20px;
+        .char__page__img__wrapp {
+          width: 70vw;
+          max-width: 400px;
+          margin: 0 auto;
+          .char__img img {
+            width: 70vw;
+            max-width: 400px;
+            margin: 0 auto;
+          }
+        }
+        .char__text {
+          margin: 15px auto;
+          .char__name {
+            font-size: 4vw;
+          }
+          .char__description {
+            margin: 15px auto;
+            font-size: 3.5vw;
+            line-height: 5vw;
+          }
+        }
+        .char__page__buttons {
+          margin: 5px auto;
+          .back__button {
+            width: 80px;
+            height: 25px;
+            font-size: 13px;
+          }
+        }
+      }
+    }
+  }
+  .comics__page {
+    width: 95vw;
+    margin: auto;
+    .baner__wrapper {
+      .comics__banner {
+        width: 85%;
+        margin-top: 50px;
+        padding: 0 10px;
+        .left__banner_img {
+          width: 15vw;
+        }
+        .banner__tittle {
+          font-size: 2.5vw;
+          margin: 0 auto;
+        }
+        .right__banner_img {
+          width: 15vw;
+        }
+      }
+    }
+    .comics__list__wrapper {
+      width: 100%;
+      margin: 0 auto;
+      .loading__overlay {
+        display: none;
+      }
+      .comics__list {
+        width: 83vw;
+        grid-template-columns: repeat(2, 1fr);
+        .comics {
+          width: 33vw;
+          height: 45vw;
+          box-shadow: 0 0 10px rgba(255, 0, 166, 0.514);
+          .comics__image {
+            width: 100%;
+            height: 80%;
+          }
+          .comics__name__wrapp {
+            width: 100%;
+            height: 20%;
+            .comics__name {
+              font-size: 2vw;
+              margin: 5px;
+            }
+            .comics__price {
+              font-size: 2vw;
+            }
+          }
+        }
+      }
+      .load__button {
+        margin: auto;
+        font-size: 2vw;
+        width: 20vw;
+        height: 5vw;
+        border-radius: 40px;
+        box-shadow: 0 0 10px rgb(227, 0, 212);
+      }
+    }
+    .comics__info__page {
+      margin: 0 auto;
+      display: grid;
+      flex-direction: row;
+      align-items: center;
+      height: auto;
+      .baner__wrapper {
+        width: 90vw;
+        .comics__banner {
+          margin-top: 50px;
+          padding: 0 10px;
+          .left__banner_img {
+            width: 10vw;
+          }
+          .banner__tittle {
+            font-size: 2vw;
+            margin: 0 auto;
+          }
+          .right__banner_img {
+            width: 8vw;
+          }
+        }
+      }
+      .comics__back__button {
+        margin: 50px auto 0;
+        width: 20vw;
+        height: 4vw;
+        font-size: 1.9vw;
+      }
+      .comics__info {
+        box-shadow: 0 0 15px rgba(255, 0, 166, 0.514);
+        margin: 0 auto;
+        border-radius: 10px;
+        padding: 20px 10px;
+        display: grid;
+        align-items: center;
+        margin-top: 20px;
+        width: 85vw;
+
+        .comics__img {
+          margin: 0 auto;
+          width: 60%;
+          margin-top: 1vw;
+          height: auto;
+        }
+
+        .comics__text {
+          margin: 0 auto;
+          width: 100%;
+          .tittle {
+            display: flex;
+            justify-content: space-between;
+            margin: 0 auto;
+            width: 100%;
+            .comics__name {
+              width: 200%;
+              text-align: center;
+              margin: 0 auto;
+              margin-top: 5vw;
+              font-size: 2.2vw;
+            }
+          }
+
+          .comics__description {
+            text-align: center;
+            margin: 0 auto;
+            margin-top: 3vw;
+            font-size: 3vw;
+            line-height: 4.2vw;
+          }
+          .comics__pages__num {
+            margin: 0 auto;
+            margin-top: 2vw;
+            font-size: 2.5vw;
+          }
+          .comics__lang {
+            margin: 0 auto;
+            margin-top: 2.5vw;
+            font-size: 1.9vw;
+          }
+          .comics__price {
+            margin: 0 auto;
+            margin-top: 2vw;
+            font-size: 3vw;
+          }
+        }
+      }
+    }
   }
 }
 @media (max-width: 425px) {
@@ -1009,6 +1591,29 @@
             margin: 10px 0;
             padding: 3px;
             font-size: 14px;
+          }
+        }
+        .find__char__form {
+          width: 80%;
+          margin: 0 auto;
+          margin-top: 60px;
+          margin-bottom: 70px;
+          .form__title {
+            font-size: 18px;
+          }
+          .find__char__input {
+            width: 100%;
+            margin-top: 10px;
+            margin-bottom: 20px;
+          }
+          .find__char__button {
+            height: 27px;
+            width: 80px;
+            font-size: 16px;
+            line-height: 16px;
+          }
+          .find__char__button:hover {
+            transform: none;
           }
         }
       }

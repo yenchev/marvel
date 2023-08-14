@@ -11,7 +11,7 @@ const ComicsBanner = () => {
         <div className="banner__tittle">
           New comics every week! <br></br> Stay tuned!
         </div>
-        <img src={logo} alt="avenges__logo" className="left__banner_img" />
+        <img src={logo} alt="avenges__logo" className="right__banner_img" />
       </div>
     </div>
   );

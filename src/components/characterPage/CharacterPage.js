@@ -15,17 +15,19 @@ const CharacterPage = ({ character, onBackButtonClick }) => {
       <ComicsBanner />
 
       <div className="char__page">
-        <div className="char__info">
+        <div className="char__page__img__wrapp">
           <div className="char__img">
             <img src={charImgSrc} alt={name} />
           </div>
-          <div className="char__text">
-            <div className="char__name">{name}</div>
-            <button className="back__button" onClick={onBackButtonClick}>
-              Back to all
-            </button>
-            <div className="char__description">{displayDescription}</div>
-          </div>
+        </div>
+        <div className="char__text">
+          <div className="char__name">{name}</div>
+          <div className="char__description">{displayDescription}</div>
+        </div>
+        <div className="char__page__buttons">
+          <button className="back__button" onClick={onBackButtonClick}>
+            Back to all
+          </button>
         </div>
       </div>
     </div>
