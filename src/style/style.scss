@@ -10,18 +10,11 @@
 }
 
 html {
-  background-image: url("../img/bg_main.jpg");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  -webkit-background-attachment: fixed;
-  background-color: rgb(106, 0, 255);
+  background-color: rgb(7, 0, 16);
   margin: 20px auto;
   display: flex;
   justify-content: center;
   overflow: scroll;
-  height: 120%;
 }
 
 ul,
