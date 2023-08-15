@@ -11,9 +11,13 @@ const CharacterPage = ({ character, onBackButtonClick }) => {
     displayDescription = "No description available for this character. :(";
   }
   return (
-    <div className="char__wrap">
+    <div className="char__page__wrap">
       <ComicsBanner />
-
+      <div className="char__page__buttons">
+          <button className="back__button" onClick={onBackButtonClick}>
+            Back to all
+          </button>
+        </div>
       <div className="char__page">
         <div className="char__page__img__wrapp">
           <div className="char__img">
@@ -23,11 +27,6 @@ const CharacterPage = ({ character, onBackButtonClick }) => {
         <div className="char__text">
           <div className="char__name">{name}</div>
           <div className="char__description">{displayDescription}</div>
-        </div>
-        <div className="char__page__buttons">
-          <button className="back__button" onClick={onBackButtonClick}>
-            Back to all
-          </button>
         </div>
       </div>
     </div>
