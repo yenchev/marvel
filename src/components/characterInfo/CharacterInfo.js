@@ -31,13 +31,7 @@ const CharacterInfo = ({ name, imageUrl, description, comics, onGoToCharacterPag
         {comics.items && comics.items.length > 0 ? (
           <ul className="comics__list">
             {comics.items.map((comic, index) => (
-              <li
-                key={index}
-                className="comics__item"
-                onClick={() => {
-                  window.location.href = comic.resourceURI;
-                }}
-              >
+              <li key={index} className="comics__item">
                 {comic.name}
               </li>
             ))}
