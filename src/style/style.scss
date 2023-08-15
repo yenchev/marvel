@@ -17,12 +17,11 @@ html {
   background-attachment: fixed;
   -webkit-background-attachment: fixed;
   background-color: rgb(106, 0, 255);
-  margin: 0 auto;
-  margin: -150px auto;
-  padding: 180px 0 40px;
+  margin: 20px auto;
   display: flex;
   justify-content: center;
   overflow: scroll;
+  height: 120%;
 }
 
 ul,
